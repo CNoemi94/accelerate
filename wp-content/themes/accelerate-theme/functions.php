@@ -44,6 +44,7 @@ function accelerate_setup() {
 }
 add_action( 'after_setup_theme', 'accelerate_setup' );
 
+
 // Enqueue scripts and styles.
 function accelerate_scripts() {
 	wp_enqueue_style( 'accelerate-style', get_stylesheet_uri() );

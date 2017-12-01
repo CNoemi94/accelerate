@@ -14,7 +14,7 @@
 
 .home-page {
     background: url(img/taxi-photo.jpg) no-repeat scroll right center / cover rgba(0, 0, 0, 0);
-
+    margin-bottom: 0;
 }
 
 #masthead {
@@ -29,6 +29,7 @@
   width: 50%;
   float: left;
   margin-bottom: 2em;
+  clear: both;
 }
 
 .blog-post h4 {
@@ -47,4 +48,129 @@
   font-weight: 700;
   color: #45ac9d;
   text-transform: uppercase;
+}
+
+/* Case Studies */
+
+article.case-study {
+  width: 100%;
+}
+
+aside.case-study-sidebar {
+  float: left;
+  width: 33.3%;
+  padding-right: 15px;
+
+}
+
+aside.case-study-sidebar h2 {
+  font-family: "OpenSans", sans-serif;
+  font-weight: bold;
+  font-size: 18.75px;
+  color: #3b3b3b;
+  margin-bottom: 0;
+}
+
+aside.case-study-sidebar h4 {
+  font-family: "OpenSans", sans-serif;
+  font-weight: 400;
+  font-size: 10.5px;
+  color: #878787;
+  margin: 0 0 5px 0;
+}
+
+aside.case-study-sidebar h3 {
+  font-family: "OpenSans", sans-serif;
+  font-size: 10.875px;
+  color: #2b2b2b;
+  margin: 0;
+}
+
+aside.case-study-sidebar p {
+  font-family: "OpenSans", sans-serif;
+  font-size: 12.375px;
+  color: #2b2b2b;
+}
+
+div.case-study-images {
+  float: left;
+  width: 66.6%;
+}
+
+div.case-study-images img {
+  width: 100%;
+  display: block;
+  margin-bottom: 50px;
+  border: 1px solid #dddddd;
+}
+
+/* Homepage Featured Work*/
+
+div.featured-items {
+  width: 100%;
+  align: center;
+  display: block;
+
+}
+
+
+div.featured-items h4{
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bolder;
+  font-family: "Montserrat";
+
+}
+
+
+ul.homepage-featured-work {
+  list-style: none;
+  text-align: center;
+
+}
+
+ul.homepage-featured-work li {
+  float: left;
+  width: 32%;
+  padding: 10px;
+  margin: 0 5px 0 5px;
+
+}
+
+ul.homepage-featured-work li h3 {
+  margin-top: 10px;;
+}
+
+/* Return to Work link */
+
+#navigation {
+  width: 100%;
+  margin: 0;
+}
+
+/* Footer Social Media Links */
+.site-footer nav ul{
+	list-style:none;
+
+}
+
+.site-footer nav ul li {
+
+  display: inline;
+
+}
+
+.site-footer nav ul li i {
+	color:#fff;
+	padding: 5px;
+	height: 150%;
+	text-align: center;
+	vertical-align: middle;
+	border-radius: 50%;
+  background-color: #3b3b3b;
+}
+
+.site-footer nav ul li i.icon-facebook {
+	padding-left: 12.5px;
+	padding-right: 12.5px;
 }
