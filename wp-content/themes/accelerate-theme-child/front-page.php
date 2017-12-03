@@ -59,8 +59,32 @@ get_header(); ?>
 				<?php wp_reset_query(); ?>
 
 			</div>
+			<div class="twitter-feed">
+				<h4>Recent Tweet</h4>
+				<h3>&#64; Accelerate </h3>
+				<?php if ( is_active_sidebar( 'sidebar-2' ) ) : ?>
+					<div id="secondary" class="widget-area" role="complementary">
+						<?php dynamic_sidebar( 'sidebar-2' ); ?>
+						<div class="read-more-link"><a href="https://twitter.com/intent/follow?original_referer=http%3A%2F%2Flocalhost%2Faccelerate%2F&amp;ref_src=twsrc%5Etfw&amp;region=follow_link&amp;screen_name=Noemi9194&amp;tw_p=followbutton"><span>Follow Us</span> ›</a></div>
+
+					</div>
+				<?php endif; ?>
+			</div>
 		</div>
 	</section>
+	<section class="newsletter-form">
+			<div class="site-content">
+				<div class="newsletter">
+					<?php if ( is_active_sidebar( 'sidebar-3' ) ) : ?>
+						<div id="secondary" class="widget-area" role="complementary">
+							<?php dynamic_sidebar( 'sidebar-3' ); ?>
+						</div>
+					<?php endif; ?>
+				</div>
+			</div>
+		</section>
+
+
 
 
 <?php get_footer(); ?>

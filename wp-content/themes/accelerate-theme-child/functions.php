@@ -49,8 +49,21 @@ function create_custom_post_types() {
             'rewrite' => array( 'slug' => 'case-studies' ),
         )
     );
+    register_post_type( 'about_topics',
+        array(
+            'labels' => array(
+                'name' => __( 'About Topics' ),
+                'singular_name' => __( 'About Topic' )
+            ),
+            'public' => true,
+            'has_archive' => true,
+            'rewrite' => array( 'slug' => 'about-topics' ),
+            'supports' => array('title', 'editor', 'thumbnail')
+        )
+    );
 }
 add_action( 'init', 'create_custom_post_types' );
+
 
 add_filter ( 'nav_menu_css_class', 'menu_item_class', 10, 4 );
 
@@ -58,5 +71,38 @@ function menu_item_class ( $classes, $item, $args, $depth ){
   $classes[] = 'screen-reader-text';
   return $classes;
 }
+
+
+function accelerate_child_scripts() {
+  wp_enqueue_style('accelerate-style', get_stylesheet_uri());
+  wp_enqueue_style('accelerate-child-google-font', '//fonts.googleapis.com/css?family=Londrina+Solid:400,900');
+
+}
+add_action( 'wp_enqueue_scripts', 'accelerate_child_scripts' );
+
+function accelerate_theme_child_widget_init() {
+
+	register_sidebar( array(
+	    'name' =>__( 'Homepage sidebar', 'accelerate-theme-child'),
+	    'id' => 'sidebar-2',
+	    'description' => __( 'Appears on the static front page template', 'accelerate-theme-child' ),
+	    'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+	    'after_widget' => '</aside>',
+	    'before_title' => '<h3 class="widget-title">',
+	    'after_title' => '</h3>',
+	) );
+
+  register_sidebar( array(
+      'name' =>__( 'Homepage sidebar 2', 'accelerate-theme-child'),
+      'id' => 'sidebar-3',
+      'description' => __( 'Appears on the static front page template', 'accelerate-theme-child' ),
+      'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+      'after_widget' => '</aside>',
+      'before_title' => '<h3 class="widget-title">',
+      'after_title' => '</h3>',
+  ) );
+
+}
+add_action( 'widgets_init', 'accelerate_theme_child_widget_init' );
 
 ?>
